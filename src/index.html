@@ -1,39 +1,90 @@
-<!-- A pen by Developer Rahul  -->
-<div class="paper heart">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Mika</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
 
-</div>
+<!-- Heart paper -->
+<div class="paper heart"></div>
 
-  
+<!-- Message with photo -->
 <div class="paper image">
-  <p> and I fallen in</p>
-    <p>Love with You 😍 </p>
-   <img src="uploads/481946005_643855428335815_5570316878012837385_n.jpg" />
+  <p>And I've fallen in</p>
+  <p>love with you 😍</p>
+  <img src="../uploads/481946005_643855428335815_5570316878012837385_n.jpg" alt="Mika's Photo" />
+  <p style="text-align: right; font-size: 35px; margin-top: 10px;">– Mika 💖</p>
 </div>
 
 <div class="paper image">
-  <p</p>
-  <img src="https://iili.io/HSzXbmF.jpg" />
+  <p></p>
+  <img src="../uploads/481916128_643855111669180_6452564764884267704_n.jpg" />
 </div>
 
 <div class="paper image">
-  <p>How can be </p>
-   <p> someone so cute ❤️ </p>
-
-  <img src="https://iili.io/HSzXyXa.jpg" />
+  <p style="font-size: 45px;">How can someone</p>
+  <p style="font-size: 45px;">be so cute <span style="color: #ff4b5c;">❤️</span></p>
+  <p style="text-align: right; font-size: 38px; font-weight: bold; margin-top: 15px;">— Mika 💕</p>
+  <img src="../uploads/481465255_643854975002527_1779210210590634595_n.jpg" />
 </div>
-
-
 
 <div class="paper red">
-<p class="p1"> and My Favorite</p>
-<p class="p2">Person 😍</p>
+  <p class="p1">And my favorite</p>
+  <p class="p2"><strong style="color: #e63946;">person</strong> 😍</p>
+  <p class="p1" style="font-size: 40px; margin-top: 10px;">— Mika 💖</p>
 </div>
 
 <div class="paper">
-<p class="p1">You are Cute </p>
-  <p class="p1">Amazing <span style="color: red !important;">❤️</span></p>
+  <p class="p1">You are Cute, <strong style="color: #ff3e6c; font-size: 55px;">Mika</strong></p>
+  <p class="p1">Truly Amazing <span style="color: red;">❤️</span></p>
 </div>
 
 <div class="paper">
-<p class="p1">Drag the papers to move!</p>
+  <p class="p1">Drag the papers to move!</p>
 </div>
+
+<!-- 🔊 Background Music -->
+<audio id="bg-music" autoplay loop>
+  <source src="../Maki - Dilaw (Lyrics).mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- 🎵 Music Button -->
+<button id="playBtn" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: pink;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 9999;
+">Play Music 🎵</button>
+
+<!-- Drag Script -->
+<script src="./script.js"></script>
+
+<!-- Music Script -->
+<script>
+  const music = document.getElementById('bg-music');
+  const playBtn = document.getElementById('playBtn');
+
+  playBtn.addEventListener('click', () => {
+    music.play();
+    playBtn.style.display = 'none';
+  });
+
+  // Attempt autoplay on any user interaction
+  window.addEventListener('click', () => {
+    music.play().catch(() => {});
+  });
+</script>
+
+</body>
+</html>
